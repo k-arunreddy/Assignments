@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Visibility</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .customDiv {
+      background-color: lightgray;
+      padding: 10px;
+      margin: 5px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+    <br><br>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <div class="customDiv">Visible for all</div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 d-none d-sm-block">
+        <div class="customDiv">visible on small</div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 d-none d-md-block">
+        <div class="customDiv">visible on medium</div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 d-none d-lg-block">
+        <div class="customDiv">visible on large</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

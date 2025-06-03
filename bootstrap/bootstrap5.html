@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .customDiv {
+            padding: 10px;
+        }
+    </style>
+    <title>Hello, world!</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 d-xs-block d-sm-none">
+                <div class="customDiv">1Visible only in xSmall</div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 d-none d-sm-block d-md-none">
+                <div class="customDiv">2Visible Small only</div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 d-none d-md-block d-lg-none">
+                <div class="customDiv">3Visible Medium only</div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 d-none d-lg-block d-xl-none">
+                <div class="customDiv">4Visible on Large only</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

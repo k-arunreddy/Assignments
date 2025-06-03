@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>the title</title>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function() {
+            var pars = $("p");
+            for (i = 0; i < pars.length; i++) {
+                alert("Found paragraph: " + pars[i].innerHTML);
+            }
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <p class="myclass">This is a paragraph.</p>
+        <p id="id1">This is second paragraph.</p>
+        <p>This is third paragraph.</p>
+    </div>
+</body>
+</html>

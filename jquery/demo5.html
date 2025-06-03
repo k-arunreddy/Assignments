@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>the title</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-JqT3SQfawRcv/BIHPThkBvs0OEtvFf5onaxpCk0WZ10="
+            crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("em").addClass("selected");
+            $("#myid").addClass("highlight");
+        });
+    </script>
+    <style>
+        .selected { color: red; }
+        .highlight { background: yellow; }
+    </style>
+</head>
+<body>
+    <em title="Bold and Brave">This is first paragraph.</em>
+    <p id="myid">This is second paragraph.</p>
+</body>
+</html>

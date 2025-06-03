@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>the title</title>
+    <script src="jquery-1.6.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            alert($('li').map(function (index, element) {
+                return $(element).text();
+            }).get());
+        });
+    </script>
+</head>
+<body style="font-family:Arial">
+    <ul>
+        <li>US</li>
+        <li>India</li>
+        <li>UK</li>
+        <li>Canada</li>
+        <li>Australia</li>
+    </ul>
+    <div id="resultDiv"></div>
+</body>
+</html>
