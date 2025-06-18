@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+  <title>First Form</title>
+  <link rel="stylesheet" type="text/css" href="form1.css" id="style1"/> 
+  <script src="from1.js"></script>
+  <title>First Form</title>
+</head>
+<body>
+
+  <div class="setFormat" align="center">
+    <input type="radio" id="style1" name="Nstyle" onclick="changeformat(1)" checked>Format 1
+    <input type="radio" id="style1" name="Nstyle" onclick="changeformat(2)">Format 2
+    <input type="radio" id="style1" name="Nstyle" onclick="changeformat(3)">Format 3
+  </div>
+
+  <form name="MyForm" method="get" action="#" onsubmit="return validateForm();">
+
+    <table>
+      <tr>
+        <td>Empid #:</td>
+        <td><input id="empid" type="text" name="idTxt" size="65" value=""/></td>
+      </tr>
+      <tr>
+        <td>First Name:</td>
+        <td><input id="fname" type="text" name="fnameTxt" size="75" value=""/></td>
+      </tr>
+      <tr>
+        <td>Last Name:</td>
+        <td><input id="lname" type="text" name="lnameTxt" size="35" value=""/></td>
+      </tr>
+      <tr>
+        <td>Dept Name:</td>
+        <td><input id="dname" type="text" name="dnameTxt" size="35" value=""/></td>
+      </tr>
+      <tr>
+        <td>Start Date:</td>
+        <td><input type="text" name="sdateTxt" size="35" value=""/></td>
+      </tr>
+      <tr>
+        <td>Salary:</td>
+        <td><input type="text" name="salaryTxt" size="35" value=""/></td>
+      </tr>
+      <tr>
+        <td>Gender:</td>
+        <td>
+          <input type="radio" name="gender" value="male">Male
+          <input type="radio" name="gender" value="female">Female
+        </td>
+      </tr>
+      <tr>
+        <td>Field:</td>
+        <td>
+          <input type="checkbox" name="vehicle" value="IMS">IMS
+          <input type="checkbox" name="vehicle" value="BFS">BFS
+        </td>
+      </tr>
+      <tr>
+        <td>Question?/Comment:</td>
+        <td><textarea name="queryTxt" cols="40" rows="7"></textarea></td>
+      </tr>
+      <tr>
+        <td>Password:</td>
+        <td><input type="password" name="pwd" value=""/></td>
+      </tr>
+      <tr>
+        <td>Confirm Password:</td>
+        <td><input type="password" name="cpwd" value=""/></td>
+      </tr>
+      <tr>
+        <td>Upload Resume:</td>
+        <td><input type="file" name="resume" accept="file/*" size="3" value=""/></td>
+      </tr>
+      <tr>
+        <td>Upload Image:</td>
+        <td><input type="file" name="photo" accept="image/*" /></td>
+      </tr>
+      <tr>
+        <td>Cars:</td>
+        <td>
+          <select name="Cars">
+            <option value="volvo">Volvo</option>
+            <option value="Hyundai">Hyundai</option>
+            <option value="Toyota">Toyota</option>
+            <option value="Honda">Honda</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><input type="reset" name="rstBtn" size="35" value="Reset"/></td>
+        <td><input type="submit" name="submitBtn" size="35" value="Submit"/></td>
+      </tr>
+      <tr>
+        <td><input type="button" value="NeedHelp"/></td>
+      </tr>
+    </table>
+
+    <div id="result"></div>
+    <br>
+    <button type="button" onclick="userSubmit()">Submit Form</button>
+  </form>
+
+  <script>
+  function userSubmit() {
+  var empid = document.getElementById('empid').value.trim();
+  var fname = document.getElementById('fname').value.trim();
+  var lname = document.getElementById('lname').value.trim();
+  var dname = document.getElementById('dname').value.trim();
+  var sdate = document.getElementsByName('sdateTxt')[0].value.trim();
+  var salary = document.getElementsByName('salaryTxt')[0].value.trim();
+
+  var radios = document.getElementsByName("gender");
+  var selectedval = null;
+  for (const radio of radios) {
+    if (radio.checked) {
+      selectedval = radio.value;
+      break;
+    }
+  }
+
+  var checkboxes  = document.querySelectorAll('input[name="vehicle"]:checked');
+  var values = Array.from(checkboxes).map(checkbox => checkbox.value);
+  var result = "EmpID: " + empid + "<br>" +
+               "First Name: " + fname + "<br>" +
+               "Last Name: " + lname + "<br>" +
+               "Dept Name: " + dname + "<br>" +
+               "Start Date: " + sdate + "<br>" +
+               "Salary: " + salary + "<br>" +
+               "Gender: " + (selectedval) + "<br>" +
+               "Field: " + values.join(", ") + "<br>";
+
+  document.getElementById('result').innerHTML = result;
+}
+  
+  </script>
+
+</body>
+</html>
+>>>>>>> 878a21e (day 6 classwork_assignments)

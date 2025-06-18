@@ -1,0 +1,13 @@
+body {
+  font-family:sans-serif;
+  background-color:burlywood;
+  padding: 30px;
+}
+
+form {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 750px;
+  margin: auto;
+}
